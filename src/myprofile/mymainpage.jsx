@@ -6,8 +6,6 @@ import Work from "./work";
 import Contact from "./contact";
 import cs from './myport.module.css';
 import { FaHome, FaUser, FaBriefcase, FaEnvelope, FaBars, FaTimes } from "react-icons/fa";
-import { AnimatePresence } from "framer-motion";
-
 
 function App() {
    const [sidebarActive, setSidebarActive] = useState(false);
@@ -16,8 +14,12 @@ function App() {
       setSidebarActive(!sidebarActive);
    };
 
+   const closeSidebar = () => {
+      setSidebarActive(false);
+   };
+
    return (
-      <Router style={{backgroundColor: "black"}}>
+      <Router>
          <div>
             {/* Sidebar Toggle Button */}
             <div className={cs.side} onClick={toggleSidebar}>
@@ -29,22 +31,22 @@ function App() {
                {sidebarActive && (
                   <div className={cs.sidebarContent}>
                      <div className={cs.icc} data-label="Home">
-                        <NavLink to="/" className={({ isActive }) => `${cs.ic} ${isActive ? "active" : ""}`}>
+                        <NavLink to="/" className={({ isActive }) => `${cs.ic} ${isActive ? "active" : ""}`} onClick={closeSidebar}>
                            <FaHome />
                         </NavLink>
                      </div>
                      <div className={cs.icc} data-label="Aboutme">
-                        <NavLink to="/about" className={({ isActive }) => `${cs.ic} ${isActive ? "active" : ""}`}>
+                        <NavLink to="/about" className={({ isActive }) => `${cs.ic} ${isActive ? "active" : ""}`} onClick={closeSidebar}>
                            <FaUser />
                         </NavLink>
                      </div>
                      <div className={cs.icc} data-label="Accomplishments">
-                        <NavLink to="/work" className={({ isActive }) => `${cs.ic} ${isActive ? "active" : ""}`}>
+                        <NavLink to="/work" className={({ isActive }) => `${cs.ic} ${isActive ? "active" : ""}`} onClick={closeSidebar}>
                            <FaBriefcase />
                         </NavLink>
                      </div>
                      <div className={cs.icc} data-label="Contact">
-                        <NavLink to="/contact" className={({ isActive }) => `${cs.ic} ${isActive ? "active" : ""}`}>
+                        <NavLink to="/contact" className={({ isActive }) => `${cs.ic} ${isActive ? "active" : ""}`} onClick={closeSidebar}>
                            <FaEnvelope />
                         </NavLink>
                      </div>

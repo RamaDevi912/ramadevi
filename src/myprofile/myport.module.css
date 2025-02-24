@@ -189,7 +189,7 @@
   width: 45px;
   height: 45px;
   color: white;
-  background-color: #333333;
+  background-color: #f07474;
   z-index: 10000;
   font-size: 1.1rem;
   display: flex;
@@ -205,7 +205,7 @@
 }
 
 .side:hover {
-  background-color: #f07474;
+  background-color: black;
 }
 
 

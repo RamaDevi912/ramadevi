@@ -34,7 +34,7 @@
     color: #f07474;
   }
   .contactHeading {
-    font-size: 55px;
+    font-size: 40px;
     position: relative;
     z-index: 0;
     font-weight: 900;
@@ -42,6 +42,17 @@
     margin-bottom: 0;
     color:white;
     font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 600px) {
+    .contactHeading{
+      padding-top:60px;
+      
+      
+    }
   }
   .title {
     font-size: 2.5rem;
