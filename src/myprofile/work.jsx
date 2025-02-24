@@ -1,17 +1,17 @@
 import React from 'react'
 import cs from './work.module.css'
-import image from '../assets/clghub.jpg';
+// import image from 'public/clghub.jpg';
 import pa from "./pageanimation.module.css"
 import { motion } from "framer-motion";
 export default function Work() {
   const certifications = [
-    { id: 1, name: "Python", provider: "IT specialist-Pearson", file: "src/assets/Python.jpeg" },
-    { id: 2, name: "HTML and CSS",provider:"IT specialist-Pearson",file: "src/assets/HtmlCss.jpeg" },
-    { id: 3, name: "JavaScript Essentials 1", provider: "Cisco Networking Academy", file: "src/assets/js1.pdf" },
-    { id: 4, name: "JavaScript Essentials 2", provider: "Cisco Networking Academy", file: "src/assets/js2.pdf" },
-    { id: 5, name: "HTML Attributes and Tags", provider: "Great Learning Academy", file: "src/assets/HtmlAttri.jpeg" },
-    { id: 6, name: "Java", provider: "IT specialist-Pearson", file: "src/assets/javait.jpeg" },
-    { id: 7, name: "Java", provider: "Oracle", file: "src/assets/javaorac.jpeg" },
+    { id: 1, name: "Python", provider: "IT specialist-Pearson", file: "/Python.jpeg" },
+    { id: 2, name: "HTML and CSS",provider:"IT specialist-Pearson",file: "/HtmlCss.jpeg" },
+    { id: 3, name: "JavaScript Essentials 1", provider: "Cisco Networking Academy", file: "/js1.pdf" },
+    { id: 4, name: "JavaScript Essentials 2", provider: "Cisco Networking Academy", file: "/js2.pdf" },
+    { id: 5, name: "HTML Attributes and Tags", provider: "Great Learning Academy", file: "/HtmlAttri.jpeg" },
+    { id: 6, name: "Java", provider: "IT specialist-Pearson", file: "/javait.jpeg" },
+    { id: 7, name: "Java", provider: "Oracle", file: "/javaorac.jpeg" },
   ];
   
   const projects = [
@@ -29,7 +29,7 @@ export default function Work() {
       description: "An informational website providing comprehensive details about a college and its events.", 
       technologies: "JavaScript, HTML, CSS, React.js", 
       github: "https://github.com/RamaDevi912/Iship2",
-      image: image
+      image: "/clghub.jpg"
     },
     { 
       id: 3, 

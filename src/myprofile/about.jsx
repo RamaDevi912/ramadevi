@@ -32,9 +32,9 @@ const AboutMe = () => {
 		{ name: "NodeJs", percent: 50 },
 	];
 	const certifications = [
-		{ id: 1,file: "/assets/Python.jpeg" },
-		{ id: 2, file: "/assets/HtmlCss.jpeg" },
-		{ id: 3,file: "/assets/js1.pdf" },
+		{ id: 1,file: "/tech.jpeg" },
+		{ id: 2, file: "/code.jpeg" },
+		{ id: 3,file: "/edu.jpeg" },
 	]
 	const handleDownload = (file) => {
 		if (file.startsWith("http")) {
@@ -141,7 +141,7 @@ const AboutMe = () => {
 				</div>
 <br></br><br></br>
 				<button className={cs.cvButton}>
-					<a href="/assets/MyNewResumeFinal1.pdf" download="Naga_Rama_Devi_Resume.pdf" style={{ textDecoration: "none", color: "inherit" }}>
+					<a href="/myresume22P31A0438.pdf" download="Naga_Rama_Devi_Resume.pdf" style={{ textDecoration: "none", color: "inherit" }}>
 						DOWNLOAD MY RESUME
 					</a>
 				</button>

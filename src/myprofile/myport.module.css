@@ -35,10 +35,10 @@
   z-index: 1;
   position: relative;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 
   .img1 {
-    margin-left: 20px;
+    margin-left: 50px;
   }
   
 }
