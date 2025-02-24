@@ -1,0 +1,253 @@
+
+.main {
+  position: relative;
+  width: 99.2vw;
+  height: 97.8vh;
+  background-image: url('../assets/leftimage-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.main::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.img1 {
+  border-radius: 50%;
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  margin-right: 30px;
+  border: 10px solid rgba(255, 255, 255, 0.3);
+  z-index: 1;
+  position: relative;
+}
+
+.main1 {
+  display: flex;
+  justify-content: flex-end; /* Align to the right */
+  align-items: center;
+  text-align: left;
+  width: 90%;
+  max-width: 1200px;
+  position: relative;
+}
+
+.main2 {
+  width: 50%;
+  height: auto;
+  z-index: 2;
+  position: relative;
+  text-align: left; /* Align text to the left */
+  font-size: 1.2rem;
+  color: white;
+}
+
+.greeting {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #f07474;
+  margin-top: 10px;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 20px 0;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #f07474;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  border-radius: 25px;
+  transition: all 1s ease;
+}
+
+.button:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid #f07474;
+}
+
+.sidebar {
+  position: absolute;
+  top: 46px; /* Align with the side button */
+  left: 33px;
+  width: 60px; /* Initial small width */
+ overflow: hidden; 
+  background-color:#333333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 10;
+  border-radius: 30px;
+  padding-top: 20px;
+  height: 0; /* Initial height */
+  transition: height 0.4s ease-in-out; /* Increased transition time */
+  padding-bottom:20px ;
+}
+
+.sidebar.active {
+  height: 300px; /* Height when the sidebar is active */
+}
+
+.sidebarContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding-top: 45px;
+  padding-bottom: 30px;
+}
+
+.icc {
+  position: relative; /* Reference point for the tooltip */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+.icc:hover {
+  color: #f07474;
+  transform: scale(1.1);
+}
+
+
+.icc::after {
+  content: attr(data-label); 
+  position: absolute;
+  left: 50px; 
+  background-color: #f07474;
+  color: white;
+  padding: 6px 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  pointer-events: none;
+}
+
+/* Show tooltip on hover */
+.icc:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* Ensure sidebar does not clip the tooltip */
+.sidebar {
+  overflow: visible; /* Allow elements to be visible outside */
+}
+
+
+.side {
+  width: 45px;
+  height: 45px;
+  color: white;
+  background-color: #333333;
+  z-index: 10000;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.side:hover {
+  background-color: #f07474;
+}
+
+
+
+@media (max-width: 768px) {
+  .main1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .main2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .img1 {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+}
+/* Default icon styles */
+.icc a {
+  color: white; /* Default icon color */
+  text-decoration: none;
+  font-size: 1.4rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect */
+.icc a:hover {
+  color: #f07474; /* Change color on hover */
+  transform: scale(1.1);
+}
+
+/* Active (currently selected) link styling */
+.icc a.active {
+  color: #f07474 !important; /* Change active icon color */
+  font-weight: bold;
+  transform: scale(1.2);
+}

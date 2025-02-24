@@ -1,0 +1,414 @@
+.aboutContainer {
+    background-color: #222222;
+    color: white;
+    text-align: center;
+    /* padding: 100px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    font-family: 'Open Sans', sans-serif;
+    /* flex-direction: column; */
+  }
+  .aboutContainer h1 {
+    font-size: 55px;
+    position: relative;
+    z-index: 0;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  
+  .title {
+    font-size: 55px;
+    position: relative;
+    z-index: 0;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    color:white;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .highlight {
+    color: #f07474;
+  }
+  
+  .subtitle {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #555;
+    margin: 20px 0 0;
+    opacity: .8;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    opacity: .8;
+  }
+  
+  .content {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    margin-top: 65px;
+    width:fit-content;
+  }
+  @media screen and (max-width: 868px) {
+    .content
+    {
+      flex-wrap: wrap;
+    }
+    .imageContainer{
+      width:278px !important;
+    }
+    
+  }
+  .imageContainer {
+    position: relative;
+    border: 5px solid #f07474;
+    padding: 5px;
+    width:400px;
+    height: 400px;
+    position:relative;
+  }
+  
+  .profilePic {
+    width: 300px;
+    height:300px;
+    /* border-radius: 10px; */
+    position: absolute;
+    top: -4px;
+    left: -70px;
+  }
+
+  .imageContainer img {
+    width: 322px;
+    height: 94%;
+    object-fit: cover;
+    /* border-radius: 10px; */
+  }
+
+  .list1{
+    width:fit-content;
+    /* background-color: #f07474; */
+
+  }
+  .list2{
+    width:fit-content;
+
+  }
+  .names{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height:30px;
+    width:250px;
+  }
+  .info {
+    margin-left: 50px;
+    width: 50%;
+    height:fit-content;
+    /* background-color: #005bb5; */
+    text-align: left;
+    /* -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0% 50%;
+    max-width: 50%; */
+   
+  }
+  ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li::before {
+    content: none;
+  }
+  
+
+  .info ul li span {
+
+    text-transform: capitalize;
+    margin-bottom: 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    opacity: 0.8;
+    padding-right: 20px;
+    list-style: none;
+  }
+  
+  .details {
+    display: flex;
+    justify-content: space-around;
+    width: 86%;
+    text-align: left;
+    /* margin:30px; */
+    align-items: center;
+    flex-direction: column;
+  }
+  
+ 
+  
+  .cvButton {
+    background-color: #f07474;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 50px;
+  }
+  
+  .cvButton:hover {
+    background-color: white;
+    color: #f07474;
+  }
+  
+
+
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 24px;
+    /* background-color: #1a202c;  */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .cont1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    text-align: left;
+  }
+ 
+  .section{
+    width: 50%;
+  }
+  
+  @media (max-width: 850px) {
+    .cont1{
+      flex-direction: column;
+    }
+    .section{
+      width: fit-content;
+    }
+    
+
+  }
+  .i1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 8px;
+    font-size: 35px;
+    background-color: white;
+    border-radius: 50%;
+    color: #f07474;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .i1:hover {
+    background-color: #f07474;
+    color: white;
+  }
+  .heading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .timeline {
+    position: relative;
+    padding-left: 24px;
+    border-left: 4px solid #f07474; /* Blue vertical line */
+  }
+  
+  .timelineItem {
+    position: relative;
+    margin-bottom: 32px;
+    padding-left: 16px;
+  }
+  
+  .timelineItem::before {
+    content: "";
+    position: absolute;
+    left: -35px;
+    top: 1px;
+    width: 10px;
+    height: 10px;
+    background-color: #f07474;
+    border: 4px solid #f07474; 
+    border-radius: 50%;
+  }
+  
+  .year {
+    font-size: 14px;
+    color: #9ca3af; /* Gray text */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .role, .degree {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .company, .institution {
+    font-size: 15px;
+    color: #f07474; /* Light blue */
+
+  }
+  
+  .description {
+    font-size: 14px;
+    color: #9ca3af; /* Gray text */
+  }
+  
+  .verticalLine {
+    width: 4px;
+    background-color: #f07474;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+  
+
+  /* Container */
+.skillsContainer {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  /* background-color: #191919; Dark Theme */
+}
+
+/* Section Title */
+.skillsTitle {
+  color: #fff;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Skill Item */
+.skillItem {
+  margin-bottom: 20px;
+}
+
+/* Skill Name */
+.skillText {
+  display: block;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* Progress Bar */
+.chartBar {
+  width: 100%;
+  height: 2px;
+  background: #444;
+  border-radius: 3px;
+  position: relative;
+}
+
+/* Progress Bar Fill */
+.itemProgress {
+  border-radius: 2px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #f07474; /* Blue Progress */
+  transition: width 1s ease-in-out;
+
+}
+
+/* Percentage Tooltip (Fixed) */
+.percent {
+  height: 32px;
+  margin-top: -41px;
+  position: absolute;
+  left: 0;  /* Default */
+  width: 46px;
+  z-index: 10;
+  background: #f07474;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 31px;
+  top: 50%;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+@media screen and (max-width: 769px) {
+  .percent{
+    margin-top: -3px;
+  }
+}
+.btn {
+  padding: 10px 15px;
+  border: none;
+  background: #f07474;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: white;
+  color: #f07474;
+}
+/* Arrow */
+.arrow {
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #f07474;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .skillsContainer {
+      width: 95%;
+      padding: 15px;
+  }
+
+  .percent {
+      font-size: 12px;
+      top: -35px; /* Adjust tooltip position */
+  }
+}
