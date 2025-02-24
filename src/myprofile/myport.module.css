@@ -35,6 +35,13 @@
   z-index: 1;
   position: relative;
 }
+@media (max-width: 768px) {
+
+  .img1 {
+    margin-left: 20px;
+  }
+  
+}
 
 .main1 {
   display: flex;
